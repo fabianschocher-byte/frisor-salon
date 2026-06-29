@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { MapPin, Phone, Clock, Star, ChevronDown } from 'lucide-react';
 
 export default function FrisorSalong() {
-  const [expandedService, setExpandedService] = useState(null);
-  const [bookingStep, setBookingStep] = useState(1);
-  const [selectedService, setSelectedService] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [expandedService, setExpandedService] = useState<number | null>(null);
+  const [bookingStep, setBookingStep] = useState<number>(1);
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
   const salonInfo = {
     name: "Clara's Frisörsalong",
@@ -233,9 +233,9 @@ export default function FrisorSalong() {
           <iframe
             width="100%"
             height="400"
-            frameBorder="0"
+            frameBorder={0}
             src={salonInfo.googleMapsEmbed}
-            allowFullScreen=""
+            allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="rounded-lg"
