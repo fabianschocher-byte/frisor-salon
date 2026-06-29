@@ -99,7 +99,7 @@ export default function FrisorSalong() {
         </section>
 
         {/* BOOKING SECTION */}
-        <section className="bg-pink-50 rounded-xl p-8 mb-16">
+        <section id="booking-section" className="bg-pink-50 rounded-xl p-8 mb-16">
           <h2 className="text-2xl font-bold mb-6 text-pink-900">Boka Din Tid</h2>
           
           {/* STEP 1: VÄLJ TJÄNST */}
