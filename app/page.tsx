@@ -56,8 +56,11 @@ export default function FrisorSalong() {
           <h2 className="text-3xl font-bold mb-4">Ny Look? Vi Fixar Det!</h2>
           <p className="text-pink-100 mb-6">Boka tid online eller ring oss direkt</p>
           <button 
-            onClick={() => setBookingStep(1)}
-            className="bg-white text-pink-700 font-bold py-3 px-8 rounded-lg hover:bg-pink-50 transition"
+            onClick={() => {
+              console.log("Button clicked!");
+              setBookingStep(1);
+            }}
+            className="bg-white text-pink-700 font-bold py-3 px-8 rounded-lg hover:bg-pink-50 transition cursor-pointer"
           >
             Boka Tid Nu
           </button>
@@ -111,7 +114,7 @@ export default function FrisorSalong() {
                       setSelectedService(service);
                       setBookingStep(2);
                     }}
-                    className="border-2 border-pink-300 rounded-lg p-4 text-left hover:bg-pink-200 transition font-semibold"
+                    className="border-2 border-pink-300 rounded-lg p-4 text-left hover:bg-pink-200 transition font-semibold cursor-pointer"
                   >
                     {service.name} - {service.price} kr
                   </button>
@@ -133,7 +136,7 @@ export default function FrisorSalong() {
                       setSelectedTime(time);
                       setBookingStep(3);
                     }}
-                    className="border-2 border-pink-300 rounded-lg p-2 hover:bg-pink-300 transition font-semibold text-sm"
+                    className="border-2 border-pink-300 rounded-lg p-2 hover:bg-pink-300 transition font-semibold text-sm cursor-pointer"
                   >
                     {time}
                   </button>
@@ -141,7 +144,7 @@ export default function FrisorSalong() {
               </div>
               <button 
                 onClick={() => setBookingStep(1)}
-                className="text-pink-600 underline text-sm"
+                className="text-pink-600 underline text-sm cursor-pointer"
               >
                 ← Tillbaka
               </button>
@@ -167,13 +170,13 @@ export default function FrisorSalong() {
                     setSelectedService(null);
                     setSelectedTime(null);
                   }}
-                  className="bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition flex-1"
+                  className="bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition flex-1 cursor-pointer"
                 >
                   Bekräfta Bokning
                 </button>
                 <button 
                   onClick={() => setBookingStep(2)}
-                  className="text-pink-600 underline"
+                  className="text-pink-600 underline cursor-pointer"
                 >
                   Ändra
                 </button>
@@ -270,8 +273,11 @@ export default function FrisorSalong() {
           <h2 className="text-2xl font-bold mb-4">Redo för En Ny Look?</h2>
           <p className="mb-6">Boka tid idag och få en fantastisk frisöruplevelse!</p>
           <button 
-            onClick={() => setBookingStep(1)}
-            className="bg-white text-pink-700 font-bold py-3 px-8 rounded-lg hover:bg-pink-50 transition"
+            onClick={() => {
+              console.log("CTA Button clicked!");
+              setBookingStep(1);
+            }}
+            className="bg-white text-pink-700 font-bold py-3 px-8 rounded-lg hover:bg-pink-50 transition cursor-pointer"
           >
             Boka Tid Nu
           </button>
